@@ -1,0 +1,12 @@
+@import "index.scss";
+
+.Container {
+  border-right: 1px solid #e6ecf3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 0px;
+  }
+}

@@ -1,0 +1,38 @@
+@import "index.scss";
+
+.ChannelSelectorContainer {
+  .ChannelSelectorList {
+    display: block;
+
+    li {
+      margin-bottom: 8px;
+      a {
+        text-decoration: none;
+        display: block;
+        border-radius: 8px;
+        text-decoration: none;
+        padding: 10px 1rem;
+        font-weight: 600;
+        font-size: 0.85rem;
+        background-color: transparent;
+        color: $text-color;
+
+        &:hover {
+          background-color: $light-blue;
+        }
+
+        @media (max-width: $breakpoint-medium) {
+          border-radius: 0px;
+        }
+      }
+
+      .SelectedLink {
+        background-color: $medium-blue;
+
+        &:hover {
+          background-color: $medium-blue;
+        }
+      }
+    }
+  }
+}

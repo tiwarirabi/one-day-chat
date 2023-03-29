@@ -1,0 +1,63 @@
+@import "index.scss";
+
+.Container {
+  .SectionTitle {
+    margin-left: 20px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $faint-blue;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+
+  .UserSelectorContainer {
+    cursor: pointer;
+    margin-bottom: 40px;
+    overflow: auto;
+
+    .SingleUserContainer {
+      float: left;
+      margin-right: 10px;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid transparent;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      @media (max-width: $breakpoint-medium) {
+        margin-right: 0px;
+        float: none;
+        border-radius: 0px;
+      }
+
+      .UserImage {
+        height: 48px;
+        width: 48px;
+        border-radius: 30px;
+        background-color: $dark-blue;
+      }
+
+      &:hover {
+        background-color: $light-blue;
+        border-color: $light-blue;
+      }
+    }
+
+    .SelectedUserContainer {
+      background-color: $medium-blue;
+      border: 1px solid $medium-blue;
+
+      &:hover {
+        background-color: $medium-blue;
+        border: 1px solid $medium-blue;
+      }
+    }
+  }
+}

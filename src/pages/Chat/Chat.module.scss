@@ -1,0 +1,24 @@
+@import "index.scss";
+
+.Container {
+  color: $text-color;
+  max-width: $max-width;
+  margin: 0px auto;
+  height: 100vh;
+
+  .ContentContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .SideBarLayoutContainer {
+    flex: 1;
+  }
+
+  .ChatLayoutContainer {
+    flex: 2;
+    @media (max-width: $breakpoint-medium) {
+      flex: 5;
+    }
+  }
+}

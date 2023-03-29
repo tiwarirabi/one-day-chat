@@ -1,0 +1,8 @@
+{
+    "users": [
+        {"userId": "Joyse"}, {"userId": "Sam"}, {"userId": "Russell"}
+    ],
+    "channels": [
+        {"channelId": "General"}, {"channelId": "Technology"}, {"channelId": "LGTM"}
+    ]
+}

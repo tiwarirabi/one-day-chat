@@ -1,0 +1,119 @@
+@import "index.scss";
+
+.Container {
+  background-color: $light-gray;
+
+  .ContainerTitle {
+    line-height: 64px;
+    padding: 0 15px;
+    border-radius: 0 3px 0 0;
+    border-bottom: 1px solid $dark-light-gray;
+    background-color: $lightest-grey;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .ChatContainer {
+    padding: 0 1rem;
+    position: relative;
+
+    .ReadMoreButton {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+      display: block;
+      margin: 1rem 0;
+      cursor: pointer;
+      color: $white;
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: $darkest-blue;
+        border-color: $darkest-blue;
+      }
+    }
+
+    .MessagesContainer {
+      padding-top: 20px;
+      height: calc(100vh - 255px);
+      overflow: scroll;
+      border: 1px solid #e6ecf3;
+      padding-right: 10px;
+
+      display: flex;
+      flex-direction: column-reverse;
+
+      .NoMessages {
+        text-align: center;
+        padding: 50px 0;
+        font-size: 1.2em;
+
+        span {
+          display: block;
+          font-size: 0.7em;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .SendContainer {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ddd;
+    background-color: $lightest-grey;
+
+    .SendUser {
+      align-self: center;
+      padding: 20px;
+      .UserImage {
+        height: 48px;
+        width: 48px;
+      }
+
+      @media (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+
+    textarea {
+      align-self: center;
+      width: 65%;
+      margin-right: 20px;
+      display: block;
+      height: calc(3em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $text-color;
+      background-color: $white;
+      background-clip: padding-box;
+      border: 1px solid $medium-blue;
+      border-radius: 8px;
+      overflow: auto;
+      resize: vertical;
+
+      &:active {
+        border: 1px solid $error-red;
+        outline: 0;
+      }
+      &:focus {
+        border: 1px solid $dark-blue;
+        outline: 0;
+      }
+
+      @media (max-width: $breakpoint-small) {
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

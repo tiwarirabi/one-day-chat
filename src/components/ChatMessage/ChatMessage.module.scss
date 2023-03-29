@@ -1,0 +1,157 @@
+@import "index.scss";
+
+.Container {
+  overflow: auto;
+  display: table;
+  margin-bottom: 40px;
+
+  .SenderInfo {
+    display: flex;
+    flex-direction: column;
+
+    .SenderImage {
+      height: 48px;
+      width: 48px;
+      border-radius: 30px;
+      background-color: $dark-blue;
+    }
+
+    .SenderName {
+      text-align: center;
+      font-size: 0.75rem;
+      color: $darkest-blue;
+      margin-top: 5px;
+    }
+  }
+
+  .MessageBlock {
+    max-width: 75%;
+    margin-right: 0px;
+  }
+
+  .Message {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .MessageContainer {
+    background-color: $white;
+    padding: 1.5rem 1.5rem;
+    border-radius: 8px;
+    background: $white;
+    font-weight: 300;
+    line-height: 150%;
+    position: relative;
+  }
+
+  .MessageLeft {
+    text-align: left;
+    // flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 20px;
+
+    .MessageContainer {
+      background-color: $white;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 10px;
+        border: 10px solid;
+        left: -20px;
+        border-color: transparent $white transparent transparent;
+      }
+    }
+  }
+
+  .MessageRight {
+    text-align: right;
+    // flex-direction: row-reverse;
+    justify-content: end;
+    align-self: end;
+    align-items: flex-end;
+
+    margin-right: 20px;
+
+    .MessageContainer {
+      background-color: $medium-blue;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 10px;
+        border: 10px solid;
+        right: -20px;
+        border-color: transparent transparent transparent $medium-blue;
+      }
+    }
+
+    .MessageContainerWithError {
+      background-color: $light-pink;
+
+      &::before {
+        border-color: transparent transparent transparent $light-pink;
+      }
+    }
+  }
+
+  .StatusTimeContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+
+    .MessageTime {
+      margin: 0px 5px;
+      font-size: 0.8rem;
+    }
+
+    .MessageSentStatus {
+      margin: 0px 5px;
+      font-size: 0.8rem;
+
+      span {
+        margin: 0 5px;
+        font-size: 0.75rem;
+        display: inline;
+      }
+
+      svg {
+        display: inline;
+      }
+    }
+
+    .MessageSentStatusError {
+      color: $error-red;
+    }
+
+    .MessageSentStatusSuccess {
+      color: $success-green;
+    }
+
+    .MessageSentStatusSending {
+      color: $darkest-blue;
+    }
+  }
+}
+
+.ContainerLeft {
+  .SenderInfo {
+    float: left;
+  }
+
+  .MessageBlock {
+    float: left;
+  }
+}
+
+.ContainerRight {
+  .SenderInfo {
+    float: right;
+  }
+
+  .MessageBlock {
+    float: right;
+  }
+}

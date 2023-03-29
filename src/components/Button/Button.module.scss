@@ -1,0 +1,19 @@
+@import "index.scss";
+
+.Button {
+  display: block;
+  align-self: center;
+  margin-right: 10px;
+  height: 55px;
+  cursor: pointer;
+  color: $white;
+  background-color: $primary-button;
+  border: 1px solid transparent;
+  padding: 0 25px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $primary-button-hover;
+    border-color: $primary-button-hover;
+  }
+}
