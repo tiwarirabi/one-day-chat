@@ -1,6 +1,19 @@
 @import "index.scss";
 
 .ChannelSelectorContainer {
+    .SectionTitle {
+        margin-left: 20px;
+        margin-bottom: 16px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $faint-blue;
+    
+        @media (max-width: $breakpoint-medium) {
+          margin-left: 0px;
+          text-align: center;
+        }
+      }
+      
   .ChannelSelectorList {
     display: block;
 
