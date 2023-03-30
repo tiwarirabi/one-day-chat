@@ -13,7 +13,7 @@ const client = new ApolloClient({
 const ChatWithProvider = () => {
   const { pathname } = useLocation();
   const [channelIdInUrl, setChannelIdInUrl] = useState(
-    pathname.replace("/", "")
+    pathname.replaceAll("/", "")
   );
 
   useEffect(() => {
