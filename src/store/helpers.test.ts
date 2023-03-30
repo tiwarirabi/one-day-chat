@@ -29,7 +29,6 @@ test("store helpers ", () => {
       userId: staticData.users[2].userId,
       messageId: "3",
     },
-    {},
   ];
 
   const output = storeHelpers.sanitizeMessages(input);
