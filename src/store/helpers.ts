@@ -19,7 +19,7 @@ const sortMessages = (messages: IMessage[]): IMessage[] => {
  * @returns {IMessage[]}
  */
 const nonEmpty = (messages: IMessage[]): IMessage[] => {
-  return messages.filter((m) => m);
+  return messages.filter((m) => m && m.userId);
 };
 
 /**
@@ -102,4 +102,9 @@ export const optimisticSend = ({
   const messages = sanitizeMessages([...thisChannel.data, optimisticMessage]);
 
   return { tempMessageId, messages };
+};
+
+// exported forr test.
+export default {
+  sanitizeMessages,
 };

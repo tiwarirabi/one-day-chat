@@ -97,7 +97,7 @@ const ChatContainer = (props: any) => {
           {fetchingNew ? <Spinner /> : null}
           {data?.length ? (
             data.map((message: any) => (
-              <ChatMessage message={message} user={userId} />
+              <ChatMessage key={message.messageId} message={message} user={userId} />
             ))
           ) : !data?.length && !fetchingNew && !fetchingOld ? (
             <div className={styles.NoMessages}>

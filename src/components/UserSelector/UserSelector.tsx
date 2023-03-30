@@ -11,6 +11,7 @@ const UserSelector = (props: any) => {
       <section className={styles.UserSelectorContainer}>
         {users.map((user: any) => (
           <section
+            key={user.userId}
             onClick={() => selectUser(user.userId)}
             className={`${styles.SingleUserContainer} ${
               user.userId === selectedUser.userId

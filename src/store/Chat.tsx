@@ -4,7 +4,7 @@ import useLatestMessages from "graphql/useLatestMessages";
 import useMoreMessages from "graphql/useMoreMessages";
 import useSendMessage from "graphql/useSendMessage";
 
-import staticData from "./data.json";
+import staticData from "data.json";
 import { optimisticSend, sanitizeMessages } from "./helpers";
 import {
   IChannel,
@@ -70,9 +70,8 @@ export const ChatProvider = (props: any) => {
       .then((messages: IMessage[]) => {
         latestMessages = messages;
       })
-      .catch((error: any) => {
+      .catch(() => {
         latestMessages = channelMessages[selectedChannel.channelId]?.data || [];
-        console.error(error);
       })
       .finally(() => {
         updateChannelMessageData(selectedChannel, latestMessages);
@@ -127,8 +126,7 @@ export const ChatProvider = (props: any) => {
 
         updateChannelMessageData(selectedChannel, [...currentMessages, data]);
       })
-      .catch((error: any) => {
-        console.error(error);
+      .catch(() => {
         const messages = optimisticChannelMessages.map((m) => {
           if (m.tempMessageId === tempMessageId) {
             return { ...m, sending: false, error: true };
@@ -179,8 +177,7 @@ export const ChatProvider = (props: any) => {
           ...messages,
         ]);
       })
-      .catch((error: any) => {
-        console.error(error);
+      .catch(() => {
         updateChannelFetching(selectedChannel, false, false);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps

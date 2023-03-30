@@ -12,7 +12,7 @@ const ChannelSelector = (props: any) => {
       <p className={styles.SectionTitle}>Channels</p>
       <ul className={styles.ChannelSelectorList}>
         {channels.map((channel: any) => (
-          <li>
+            <li key={channel.channelId}>
             <Link
               className={
                 channel.channelId === selectedChannel.channelId
