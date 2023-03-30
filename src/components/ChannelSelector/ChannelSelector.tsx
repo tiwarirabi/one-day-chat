@@ -19,7 +19,7 @@ const ChannelSelector = (props: any) => {
                   ? styles.SelectedLink
                   : ""
               }
-              to={channel.channelId}
+              to={`${channel.channelId}/`}
             >
               {channel.channelId} Channel
             </Link>
