@@ -1,4 +1,6 @@
-# Getting Started with One Day Chat
+# One Day Chat
+
+[Demo](https://breakdance.github.io/breakdance/)
 
 ## Available Scripts
 
@@ -14,3 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `npm test`
 
 Runs the tests.
+
+### `npm run deploy`
+
+To deploy to gh-pages.
