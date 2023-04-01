@@ -1,6 +1,6 @@
 # One Day Chat
 
-[Demo](https://breakdance.github.io/breakdance/)
+[Demo](https://tiwarirabi.github.io/one-day-chat)
 
 ## Available Scripts
 
